@@ -1,11 +1,12 @@
 import SplashScreen from "@/components/SplashScreen";
-import SplitScreenSlider from "@/components/SplitScreenSlider";
+import dynamic from "next/dynamic";
 
 export default function Home() {
+  const SplitScreenSliderNoSSR = dynamic(()=> import('@/components/SplitScreenSlider'),{ssr:false})
   return (
     <>
       <SplashScreen />
-      <SplitScreenSlider />
+      <SplitScreenSliderNoSSR />
     </>
   );
 }
