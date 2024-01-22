@@ -8,7 +8,7 @@ const ContactUs = () => {
     <section className="w-full h-auto border   bg-cover bg-center -mt-[90px]  bg-[url(/WeddingWhiteBg.webp)]  ">
       {/*Section 1 - Hero Page */}
       <div className="padding-container py-20  lg:py-40 border w-full text-center gap-5 flex-col flex lg:gap-10">
-        <h1 className="text-2xl lg:text-7xl pt-10 text-[#40506A]">
+        <h1 className="text-2xl lg:text-7xl pt-10 text-[#40506A] transition duration-500 ease-in-out hover:text-promises-gold cursor-default">
           CONTACT US
         </h1>
         <p className="text-sm lg:text-2xl">
@@ -17,7 +17,7 @@ const ContactUs = () => {
       </div>
 
       {/*Section 2 -Contact Form */}
-      <section className="w-full h-auto border bg-white shadow-2xl flex flex-col justify-center  ">
+      <section className="w-full h-auto border bg-white shadow-custom flex flex-col justify-center  ">
         <div className="border w-full py-10 px-2 md:px-40 ">
           <ContactForm />
         </div>
@@ -25,7 +25,7 @@ const ContactUs = () => {
 
         <div className=" w-full flex flex-col  md:flex-rows  lg:py-20 justify-center items-center padding-container  ">
           {/*Left Div */}
-          <div className="w-full">
+          <div className="w-full z-[0]">
             <Contactmap />
           </div>
           {/*Right Div */}

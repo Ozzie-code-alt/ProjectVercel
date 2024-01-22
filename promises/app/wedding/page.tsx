@@ -1,9 +1,18 @@
+"use client";
 import React from "react";
 import Button from "@/components/Button";
 import Image from "next/image";
 import { StevenAndJoie, WeddingPackages } from "@/contants";
 import Footer from "@/components/Footer";
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import { slideInFromBottom, slideInFromRight } from "@/utils/motion";
+
 const WeddingPage = () => {
+  const [ref, inView] = useInView({
+    triggerOnce: true,
+  });
+
   return (
     <section className="w-screen flexCenter -mt-[90px] flex-col  h-screen ">
       <div className="h-full w-full ">
@@ -11,12 +20,22 @@ const WeddingPage = () => {
         <div className="bg-[url(/WeddingMainPage.webp)] flex justify-center items-center bg-cover bg-center h-[400px] sm:pt-40 lg:pt-0 lg:h-full w-full">
           <div className=" flexEnd  padding-container w-full ">
             <div className="sm:flex  hidden flex-col h-40 text-center">
-              <h1 className="sm:text-7xl lg:text-9xl text-[#40506A] uppercase ">
+              <motion.h1
+                className="sm:text-7xl lg:text-9xl text-[#40506A] uppercase"
+                initial="hidden"
+                animate="visible"
+                variants={slideInFromRight(0.5)}
+              >
                 Promises
-              </h1>
-              <h1 className="sm:text-4xl lg:text-7xl text-[#40506A] uppercase">
+              </motion.h1>
+              <motion.h1
+                className="sm:text-4xl lg:text-7xl text-[#40506A] uppercase"
+                initial="hidden"
+                animate="visible"
+                variants={slideInFromRight(0.7)}
+              >
                 Wedding Studio
-              </h1>
+              </motion.h1>
             </div>
           </div>
         </div>
@@ -122,24 +141,51 @@ const WeddingPage = () => {
               >
                 <div className=" padding-container py-10 gap-5  flex flex-col">
                   <div className=" flex max-w-[300px] text-center ">
-                    <h1 className="text-3xl text-[#40506A]">
+                    <motion.h1
+                      className="text-3xl text-[#40506A]"
+                      ref={ref}
+                      initial="hidden"
+                      animate={inView ? "visible" : "hidden"}
+                      variants={slideInFromBottom(0.5)}
+                    >
                       {list.description}
-                    </h1>
+                    </motion.h1>
                   </div>
                   <div className=" flex max-w-[300px] justify-center ">
-                    <p className="text-2xl">{list.title}</p>
+                    <motion.p
+                      className="text-2xl"
+                      ref={ref}
+                      initial="hidden"
+                      animate={inView ? "visible" : "hidden"}
+                      variants={slideInFromBottom(0.7)}
+                    >
+                      {list.title}
+                    </motion.p>
                   </div>
                   <div className=" flex max-w-[300px] text-center justify-center ">
-                    <p className="text-[#D1AF70] text-2xl">{list.link}</p>
+                    <motion.p
+                      className="text-[#D1AF70] text-2xl"
+                      ref={ref}
+                      initial="hidden"
+                      animate={inView ? "visible" : "hidden"}
+                      variants={slideInFromBottom(0.9)}
+                    >
+                      {list.link}
+                    </motion.p>
                   </div>
                 </div>
-                <div>
+                <motion.div
+                  ref={ref}
+                  initial="hidden"
+                  animate={inView ? "visible" : "hidden"}
+                  variants={slideInFromBottom(0.5)}
+                >
                   <img
                     src={list.img}
                     alt="steven_joie_pic"
                     className="md:h-[500px] object-cover h-[350px]"
                   />
-                </div>
+                </motion.div>
               </div>
             ))}
           </div>
@@ -152,9 +198,9 @@ const WeddingPage = () => {
               <h1 className="text-2xl lg:text-4xl">Wedding Packages</h1>
               <p className="max-w-[700px]">
                 Choose from our range of wedding photography packages, each
-                designed to suit different styles and preferences. Whether it&apos;s
-                a grand celebration or an intimate ceremony, we&apos;re here to
-                document every moment
+                designed to suit different styles and preferences. Whether
+                it&apos;s a grand celebration or an intimate ceremony,
+                we&apos;re here to document every moment
               </p>
             </div>
             {/*Packages List*/}
@@ -162,11 +208,11 @@ const WeddingPage = () => {
               <div className=" flex flex-row flex-wrap gap-3 justify-center h-auto pt-10 lg:pt-20  max-w-[1000px]   ">
                 {WeddingPackages.map((packages, index) => (
                   <div
-                    className={`py-5  w-full px-5 gap-5 justify-between items-center shadow-[#40506A] shadow sm:shadow-md md:shadow-lg lg:shadow-2xl flex flex-col ${
+                    className={`py-5  w-full px-5 gap-5 justify-between items-center shadow-custom flex flex-col ${
                       index < 3
                         ? " flex-basis: calc(33.333% ) w-full max-w-[320px]"
                         : "flex-basis: calc(50% - 8px) w-full max-w-[320px]"
-                    } ` }
+                    } `}
                     key={index}
                   >
                     <div className="h-full text-center  ">
@@ -184,7 +230,9 @@ const WeddingPage = () => {
                     </div>
 
                     <div className="flex flex-col justify-center items-center">
-                      <h1 className="font-bold text-2xl">Introductory Price:</h1>
+                      <h1 className="font-bold text-2xl">
+                        Introductory Price:
+                      </h1>
                       <p className="font-xl">{packages.price}</p>
                     </div>
                   </div>

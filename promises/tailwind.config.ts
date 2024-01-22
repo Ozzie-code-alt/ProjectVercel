@@ -18,6 +18,14 @@ const config = {
       },
     },
     extend: {
+      fontFamily:{
+        koulen : ["Koulen", "sans-serif"],
+        mandali : ["Mandali"],
+        caudex: ['Caudex'],
+      },
+      boxShadow:{
+        'custom': '1px 3px 16px 14px rgba(0, 0, 0, 0.19)', // Example custom shadow color
+      },
       colors: {
         promises:{
           gold: "#d1af70",

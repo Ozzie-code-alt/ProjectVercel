@@ -28,7 +28,7 @@
   }
 
 .sectionPage{
-  @apply w-full h-full bg-[url('/promisesBG.webp')] px-10 py-10
+  @apply w-full h-full bg-[url('/promisesBG.webp')]  py-10
 }
 
 .h1Font{
@@ -38,5 +38,27 @@
 .btnPadding{
   @apply px-16 py-5 lg:px-40 lg:py-10
 }
+.promises-kept-image {
+  width: 100%; 
+  height: auto; 
+  object-fit: cover;
+}
+
+
+@media (min-width: 768px) {
+  .promises-kept-image {
+    width: 400px; 
+    height: 250px; 
+  }
+}
+
+
+@media (min-width: 1024px) {
+  .promises-kept-image {
+    width: 600px; 
+    height: 400px; 
+  }
+}
+
 
 }

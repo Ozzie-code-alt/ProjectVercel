@@ -1,14 +1,10 @@
 "use client";
 import React from "react";
 import Link from "next/link";
-import { useState } from "react";
 import { NavbarList } from "@/contants";
 import {
   Sheet,
   SheetContent,
-  SheetDescription,
-  SheetHeader,
-  SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
 
@@ -17,12 +13,11 @@ const WeddingNavbar = () => {
     <section className="w-screen z-[1] relative bg-white lg:bg-transparent  h-auto">
       <div className="px-3 md:px-10 pt-7 pb-3">
         <Link href={"/wedding"}>
-        
-        <img
-          src="/MainLogoHeader.webp"
-          className="flexStart w-[150px]"
-          alt="Main_Logo"
-        />
+          <img
+            src="/MainLogoHeader.webp"
+            className="flexStart w-[150px]"
+            alt="Main_Logo"
+          />
         </Link>
       </div>
       <div className="w-auto flexEnd  px-10  ">
@@ -31,23 +26,22 @@ const WeddingNavbar = () => {
             <div className="bg-white cursor-pointer" key={index}>
               {" "}
               {/*Add Link here */}
-              <ul className="hidden lg:flex flex-row w-auto lg:gap20 px-5 py-7 ">
+              <ul className="hidden lg:flex flex-row w-auto lg:gap20  px-5 py-7 transition duration-500 ease-in-out hover:text-promises-gold">
                 <Link href={list.Link}>
-                  <li>{list.title}</li>
+                  <li className="">{list.title}</li>
                 </Link>
               </ul>
             </div>
           ))}
         </div>
 
-        <div className="flex lg:hidden absolute top-0 w-auto  gap-10 px-5 py-4 mt-4 md:px-10 md:py-6 md:mt-0 rounded-xl ">
+        <div className="flex lg:hidden absolute top-0 w-auto gap-10 px-5 py-4 mt-4 md:px-10 md:py-6 md:mt-0 rounded-xl ">
           <Sheet>
-            <SheetTrigger>Open</SheetTrigger>
-            <SheetContent>
-              <SheetHeader>
-                <SheetTitle>Are you absolutely sure?</SheetTitle>
-              </SheetHeader>
+            <SheetTrigger>
+              <img src="/Menu.webp" className="h-[40px]"/>
+            </SheetTrigger>
 
+            <SheetContent className="h-auto w-full bg-white">
               {NavbarList.map((list, index) => (
                 <div className="bg-white" key={index}>
                   {" "}
