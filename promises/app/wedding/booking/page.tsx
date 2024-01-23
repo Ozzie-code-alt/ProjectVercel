@@ -57,7 +57,7 @@ const Bookingpage = () => {
             <div className="text-center">
               <h1 className="text-2xl text-[#40506A] font-bold ">SELECT A DATE</h1>
             </div>
-            <BookingForm sourcePage="Creative" />
+            <BookingForm sourcePage="Wedding" />
           </div>
         </div>
       </div>

@@ -71,7 +71,7 @@ export const WeddingPackages = [
 export const CreativePackages = [
     {
         title:"Deluxe",
-        inclusions: ["4-hour use of Prometheus Studio", "80 retouched and edited photos","5 graphic art posters","Pre-Production Consultaion", "Creative Photography", "Creative and Art Direction", "Simple sey Design","Processed and edited photos on flash drive"],
+        inclusions: [{title: "4-hour use of Prometheus Studio"}, { title: "80 retouched and edited photos"},{title: "5 graphic art posters"},{title: "Pre-Production Consultaion"}, {title: "Creative Photography"}, {title:"Creative and Art Direction"}, {title:"Simple sey Design"},{title:"Processed and edited photos on flash drive"}],
         price: "PHP25,000",
     },
     {
@@ -108,11 +108,9 @@ export const CreativePackages = [
         ],
         price: "PHP20,000",
     },
-
-
     {
         title:"Elite",
-        inclusions: ["4-hour use of Prometheys Studio", "40 retouched and edited photos","1 graphic art poster", "Pre-production Consulation","Creative Photography","Creative and Art Direction","Processed and Edited photos on flash drive"],
+        inclusions: [{title: "4-hour use of Prometheys Studio"}, {title:"40 retouched and edited photos"},{title:"1 graphic art poster"}, {title:"Pre-production Consulation"},{title:"Creative Photography"},{title:"Creative and Art Direction"},{title:"Processed and Edited photos on flash drive"}],
         price: "PHP15,000",
     },
 ]
@@ -136,6 +134,29 @@ export const NavbarList = [
     Link:"/"
 },
 ]
+
+export const CreativeList = [
+  {
+      title:"Home",
+      Link:"/creative/"
+  },
+  {
+    title:"Our Art",
+    Link:"/creative/our-art"
+},
+  {
+      title:"Contact Us",
+      Link:"/creative/contactUs"
+  },
+  {
+      title:"Schedule a Date",
+      Link:"/creative/booking"
+  },
+  {
+      title:"Login",
+      Link:"/"
+  },
+  ]
 
 
 export const StevenAndJoie = [
@@ -212,5 +233,38 @@ process:"You will be having a video call with the Promises Team."
     {
       process:"With our tailored plan that aligns with your vision,we'll efficiently secure your booking by assisting you through the deposit process"
       },
+
+]
+
+
+export const PortfolioImage = [
+  {
+    title:"/pic2.webp"
+  },
+  {
+    title:"/pic8.webp"
+  },
+  {
+    title:"/pic3.webp"
+  },
+  {
+    title:"/pic4.webp"
+  },
+  {
+    title:"/pic5.webp"
+  },
+  {
+    title:"/pic6.webp"
+  },
+  {
+    title:"/pic7.webp"
+  },
+  {
+    title:"/pic1.webp"
+  },
+  {
+    title:"/pic9.webp"
+  }
+
 
 ]

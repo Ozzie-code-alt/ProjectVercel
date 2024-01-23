@@ -37,6 +37,7 @@
     "react-modal": "^3.16.1",
     "tailwind-merge": "^2.2.0",
     "tailwindcss-animate": "^1.0.7",
+    "yarn": "^1.22.21",
     "yet-another-react-lightbox": "^3.15.6",
     "zod": "^3.22.4"
   },

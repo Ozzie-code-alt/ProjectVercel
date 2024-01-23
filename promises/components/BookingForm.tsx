@@ -108,14 +108,15 @@ const BookingForm = ({ sourcePage }: CalendarFormProps) => {
   }
 
   return (
-
-    <Form {...form}> 
-        <FormField
-          control={form.control}
-          name="dob"
-          render={({ field }) => (
+    <Form {...form}>
+      <FormField
+        control={form.control}
+        name="dob"
+        render={({ field }) => (
+          
             <FormItem className="flex flex-col bg-slate-200 rounded ">
               <Calendar
+                className="bg-white text-black  shadow-xl"
                 mode="single"
                 selected={field.value}
                 onSelect={field.onChange}
@@ -136,40 +137,40 @@ const BookingForm = ({ sourcePage }: CalendarFormProps) => {
                 }}
               />
             </FormItem>
-          )}
-        />
-        <FormField
-          control={form.control}
-          name="appointmentTime"
-          render={({ field }) => (
-            <FormItem className="flex flex-col">
-              <FormControl>
-                <NavigationMenuDemo
-                  isOpen={modalOpen}
-                  onClose={() => setModalOpen(false)}
-                  field={field}
-                  onClick={() => {
-                    setBookingModalOpen(true);
-                  }}
-                />
-              </FormControl>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
+         
+        )}
+      />
+      <FormField
+        control={form.control}
+        name="appointmentTime"
+        render={({ field }) => (
+          <FormItem className="flex flex-col">
+            <FormControl>
+              <NavigationMenuDemo
+                isOpen={modalOpen}
+                onClose={() => setModalOpen(false)}
+                field={field}
+                onClick={() => {
+                  setBookingModalOpen(true);
+                }}
+              />
+            </FormControl>
+            <FormMessage />
+          </FormItem>
+        )}
+      />
 
-        <BookingModalInfo
-          isOpen={bookingModalOpen}
-          isClose={() => {
-            setBookingModalOpen(false);
-          }}
-          form={form}
-          onsubmit={onSubmit}
-          onLoading={isLoading}
-          sourcePageContainer={sourcePage}
-          onPackageSelect={(packageList) => SetSelectedPackage(packageList)}
-        />
-      
+      <BookingModalInfo
+        isOpen={bookingModalOpen}
+        isClose={() => {
+          setBookingModalOpen(false);
+        }}
+        form={form}
+        onsubmit={onSubmit}
+        onLoading={isLoading}
+        sourcePageContainer={sourcePage}
+        onPackageSelect={(packageList) => SetSelectedPackage(packageList)}
+      />
     </Form>
   );
 };

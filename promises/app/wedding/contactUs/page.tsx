@@ -3,7 +3,7 @@ import dynamic from "next/dynamic";
 import React from "react";
 import Footer from "@/components/Footer";
 const ContactUs = () => {
-  const Contactmap = dynamic(() => import('@/components/Map'), { ssr: false })
+  const Contactmap = dynamic(() => import("@/components/Map"), { ssr: false });
   return (
     <section className="w-full h-auto border   bg-cover bg-center -mt-[90px]  bg-[url(/WeddingWhiteBg.webp)]  ">
       {/*Section 1 - Hero Page */}
@@ -22,17 +22,20 @@ const ContactUs = () => {
           <ContactForm />
         </div>
 
-
-        <div className=" w-full flex flex-col  md:flex-rows  lg:py-20 justify-center items-center padding-container  ">
+        <div className="border border-red-500 w-full flex flex-col  md:flex-row  lg:py-20 justify-center items-center padding-container  ">
           {/*Left Div */}
           <div className="w-full z-[0]">
             <Contactmap />
           </div>
           {/*Right Div */}
           <div className="padding-container flex gap-10 py-10 lg:gap-20 flex-col border">
-            <h1 className="text-2xl lg:text-5xl text-[#40506A] font-bold">Our Location</h1>
+            <h1 className="text-2xl lg:text-5xl text-[#40506A] font-bold">
+              Our Location
+            </h1>
             <div className="flex flex-col gap-5">
-              <h1 className="text-2xl lg:text-5xl text-[#40506A] font-bold">Address</h1>
+              <h1 className="text-2xl lg:text-5xl text-[#40506A] font-bold">
+                Address
+              </h1>
               <p className="text-lg lg:text-2xl text-[#40506A]">
                 Daily Guardian Center, Guzman-Jesena Streets, Mandurriao Iloilo
                 City, Iloilo City, Philippines
@@ -42,7 +45,7 @@ const ContactUs = () => {
         </div>
       </section>
 
-      <Footer/>
+      <Footer />
     </section>
   );
 };

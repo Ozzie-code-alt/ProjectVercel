@@ -76,12 +76,12 @@ const SplitScreenSlider = () => {
         <Link href={"/wedding"}>
           <div
             className={`h-screen bg-[url('/GinoBeaBG.webp')] bg-center bg-no-repeat bg-cover w-full ${
-              isMobile ? "flex justify-center items-center bg-center bg-no-repeat bg-cover" : ""
+              isMobile
+                ? "flex justify-center items-center bg-center bg-no-repeat bg-cover"
+                : ""
             }`}
           >
-              {/* <div className="bg-[url('/Gino_Bea_bg.webp')] h-full  "> */}
-
-             
+            {/* <div className="bg-[url('/Gino_Bea_bg.webp')] h-full  "> */}
 
             <div className="h-full flex flex-col place-content-between group w-full relative">
               <div
@@ -133,7 +133,7 @@ const SplitScreenSlider = () => {
                       height={50}
                       width={150}
                       alt="Creatives"
-                      className="sm:w-[350px]"
+                      className="min-[400px]:w-[300px]"
                     />
                   </div>
                 </div>
@@ -168,9 +168,8 @@ const SplitScreenSlider = () => {
                   </div>
                 )}
               </div>
-              </div>
             </div>
-         
+          </div>
         </Link>
       </div>
 
@@ -236,7 +235,7 @@ const SplitScreenSlider = () => {
                       height={50}
                       width={150}
                       alt="Creatives"
-                      className="sm:w-[350px]"
+                      className="min-[400px]:w-[260px]"
                     />
                   </div>
                 </div>

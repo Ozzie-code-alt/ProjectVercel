@@ -57,7 +57,7 @@ const ContactForm = () => {
                 <Input
                   placeholder="Input Name"
                   {...field}
-                  className="text-black border-[#667080] rounded-xl"
+                  className="text-black border-[#667080] bg-white rounded-xl"
                 />
               </FormControl>
               <FormMessage />
@@ -74,7 +74,7 @@ const ContactForm = () => {
                 <Input
                   placeholder="Input Mobile Number"
                   {...field}
-                  className="text-black border-[#667080] rounded-xl"
+                  className="text-black border-[#667080] bg-white rounded-xl"
                 />
               </FormControl>
               <FormMessage />
@@ -91,7 +91,7 @@ const ContactForm = () => {
                 <Input
                   placeholder="Input Email"
                   {...field}
-                  className="text-black border-[#667080] rounded-xl"
+                  className="text-black border-[#667080] bg-white rounded-xl"
                 />
               </FormControl>
               <FormMessage />
@@ -103,13 +103,13 @@ const ContactForm = () => {
           control={form.control}
           name="message"
           render={({ field }) => (
-            <FormItem className="m-2 sm:text-3xl">
+            <FormItem className="m-2 w-80  lg:w-[700px] sm:text-3xl">
               <FormLabel>Message</FormLabel>
               <FormControl>
                 <Textarea
                   {...field}
                   placeholder="Enter Your Message"
-                  className="text-black border-[#667080] rounded-xl"
+                  className="text-black h-[250px]  border-[#667080] bg-white rounded-xl"
                 />
               </FormControl>
               <FormMessage />
