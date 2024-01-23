@@ -1,7 +1,10 @@
 import ContactForm from "@/components/ContactForm";
 import CreativeNavbar from "@/components/CreativeNavbar";
-import Contactmap from "@/components/Map";
+
+import dynamic from "next/dynamic";
 const CreativeContacUs = () => {
+
+  const ContactMapNoSSR = dynamic(()=> import('@/components/Map'),{ssr:false})
   return (
     <section className="h-auto  border border-red-500 w-screen ">
       <CreativeNavbar textColor="white"></CreativeNavbar>
@@ -27,7 +30,7 @@ const CreativeContacUs = () => {
         <div className="border border-red-500 w-full flex flex-col  md:flex-row  lg:py-20 justify-center items-center padding-container  ">
           {/*Left Div */}
           <div className="w-full z-[0]">
-            <Contactmap />
+            <ContactMapNoSSR />
           </div>
           {/*Right Div */}
           <div className="padding-container flex gap-10 py-10 lg:gap-20 flex-col border">
