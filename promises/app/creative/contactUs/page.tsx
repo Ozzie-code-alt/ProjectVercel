@@ -12,7 +12,7 @@ const CreativeContacUs = () => {
               Contact Us
             </h1>
             <p className="text-sm lg:text-2xl w-full flex max-w-[500px] justify-center items-center">
-              Don’t be shy! We’d love to hear about your vision and make it into
+              Don&apos;t be shy! We&apos;d love to hear about your vision and make it into
               reality.
             </p>
 

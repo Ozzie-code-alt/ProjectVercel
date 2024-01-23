@@ -9,12 +9,12 @@ const CreativeBooking = () => {
         {" "}
         <div className=" md:flex-row flex flex-col gap-10 padding-container justify-center border  border-green-500 h-auto items-center">
           <div className="max-w-[800px]  padding-container gap-10 flex sm:pb-10 flex-col border  justify-center items-center  ">
-            <div className=" text-2xl max-w-[450px] lg:text-5xl flex border border-blue-500 justify-center items-center text-4xl font-bold text-center uppercase text-promises-gold ">
+            <div className=" text-2xl max-w-[450px] lg:text-5xl flex border border-blue-500 justify-center items-center  font-bold text-center uppercase text-promises-gold ">
               <h1>Limited spots available</h1>
             </div>
             <p className="border border-blue-500 max-w-[850px] text-xl md:text-5xl text-center ">
               Hurry! Making your dream photoshoot means taking the time and care
-              to know about you and your story. That's why we always start our
+              to know about you and your story. That&apos;s why we always start our
               photoshoots with a FREE consultation.
             </p>
           </div>
@@ -40,8 +40,8 @@ const CreativeBooking = () => {
           </h1>
           <p className="text-2xl max-w-[800px] leading-loose  md:leading-[100px] ">
             You will be spending 30-minutes on a video call with our Studio
-            Manager. Find out about you and what you're looking for (it's okay
-            if you don't know yet because that's why we're here!) Find you the
+            Manager. Find out about you and what you&apos;re looking for (it&apos;s okay
+            if you don&apos;t know yet because that&apos;s why we&apos;re here!) Find you the
             next available photoshoot date availability and get you booked in
             with your deposit
           </p>
